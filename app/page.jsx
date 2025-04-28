@@ -1,4 +1,5 @@
 import { FaAtom } from 'react-icons/fa';
+import Link from 'next/link'
 
 const FBlockElements = () => {
   // Lanthanides data
@@ -48,14 +49,14 @@ const FBlockElements = () => {
         
         {/* Glass morphism container */}
         <div className="backdrop-blur-lg bg-white/10 rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl p-4 sm:p-6 mb-8 sm:mb-10 border border-white/20">
-          <h2 className="text-xl sm:text-2xl font-semibold text-white mb-4 sm:mb-6 text-center">Lanthanides</h2>
+         <Link href="/lanthanoids"> <h2 className="text-xl sm:text-2xl font-semibold text-white mb-4 sm:mb-6 text-center">Lanthanides</h2></Link>
           <div className="grid grid-cols-4 sm:grid-cols-8 gap-2 sm:gap-3 mb-6 sm:mb-10">
             {lanthanides.map((element) => (
               <ElementCard key={element.number} element={element} color="from-cyan-400 to-blue-500" />
             ))}
           </div>
-          
-          <h2 className="text-xl sm:text-2xl font-semibold text-white mb-4 sm:mb-6 text-center">Actinides</h2>
+          <Link href="/actinoids">
+          <h2 className="text-xl sm:text-2xl font-semibold text-white mb-4 sm:mb-6 text-center">Actinides</h2></Link>
           <div className="grid grid-cols-4 sm:grid-cols-8 gap-2 sm:gap-3">
             {actinides.map((element) => (
               <ElementCard key={element.number} element={element} color="from-pink-500 to-rose-500" />
